@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="toolbar">
+        <div class="cross"> cross</div>
+            <div class="toolbaroption">
+                <div class="tool" id="pencil">
+                    <img src="./Icons/Black_Pencil.svg" alt="" class="tool-img">
+                </div>
+            <div class="tool" id="eraser">
+                <img src="./Icons/Eraser.svg" alt="" class="tool-img">
+            </div>
+            <div class="tool" id="sticky">
+                <img src="./Icons/StickyNote.svg" alt="" class="tool-img">
+            </div>
+            <div class="tool" id="upload">
+                <img src="./Icons/Photo.svg" alt="" class="tool-img">
+            </div>
+            <div class="tool" id="download">
+                <img src="./Icons/Download.svg" alt="" class="tool-img">
+            </div>
+            <div class="tool " id="undo">
+                <img src="./Icons/Undo.svg" alt="" class="tool-img">
+            </div>
+            <div class="tool " id="redo">
+                <img src="./Icons/Redo.svg" class="tool-img">
+            </div>
+            <input type="file" class="input-tag">
+
+            </div>
+            
+        
+    </div>
+
+  
+    
+    <canvas id="board"></canvas>
+    <Script src="tools.js"></Script>
+    <!--- socket.io---->
+     <script src="/socket.io/socket.io.js"></script>
+
+  <!-- Load scripts -->
+  <script src="js/socket.js"></script>
+  <script src="js/receiver.js"></script>
+  <script src="js/toolbar.js"></script>
+  <script src="js/drawing.js"></script>
+  <script src="js/undoRedo.js"></script>
+  <script src="js/sticky.js"></script>
+  <script src="js/upload.js"></script>
+  <script src="js/download.js"></script>
+    
+</body>
+</html>

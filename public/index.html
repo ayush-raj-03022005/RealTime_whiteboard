@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realtime Whiteboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="toolbaroption">
+      <button id="pencil" class="tool">
+        <img src="./Icons/Black_Pencil.svg" alt="Pencil" class="tool-img">
+      </button>
+      <button id="eraser" class="tool">
+        <img src="./Icons/Eraser.svg" alt="Eraser" class="tool-img">
+      </button>
+      <button id="sticky" class="tool">
+        <img src="./Icons/StickyNote.svg" alt="Sticky Note" class="tool-img">
+      </button>
+      <button id="upload" class="tool">
+        <img src="./Icons/Photo.svg" alt="Upload" class="tool-img">
+      </button>
+      <button id="download" class="tool">
+        <img src="./Icons/Download.svg" alt="Download" class="tool-img">
+      </button>
+      <button id="undo" class="tool">
+        <img src="./Icons/Undo.svg" alt="Undo" class="tool-img">
+      </button>
+      <button id="redo" class="tool">
+        <img src="./Icons/Redo.svg" alt="Redo" class="tool-img">
+      </button>
+      <button id="clear" class="tool">
+        <img src="./Icons/Cross.png" alt="Clear" class="tool-img">
+      </button>
+    </div>
+  </div>
+
+  <!-- Pencil Options Popup -->
+  <div class="pencil-options hidden" id="pencil-options">
+    <div class="option-title">Stroke</div>
+    <div class="color-palette">
+      <div class="color" style="background: black;" data-color="#000000"></div>
+      <div class="color" style="background: red;" data-color="#e63946"></div>
+      <div class="color" style="background: green;" data-color="#2ecc71"></div>
+      <div class="color" style="background: blue;" data-color="#3498db"></div>
+      <div class="color" style="background: orange;" data-color="#f39c12"></div>
+      <div class="color" style="background: purple;" data-color="#9b59b6"></div>
+      <div class="color" style="background: pink;" data-color="#e84393"></div>
+      <div class="color" style="background: brown;" data-color="#8e5a2b"></div>
+    </div>
+
+    <div class="option-title">Stroke width</div>
+    <input type="range" id="pencil-width" min="1" max="20" value="2">
+  </div>
+
+  <!-- Eraser Options Popup -->
+  <div class="eraser-options hidden" id="eraser-options">
+    <div class="option-title">Eraser size</div>
+    <input type="range" id="eraser-width" min="5" max="50" value="10">
+  </div>
+
+  <!-- File input (hidden) -->
+  <input type="file" class="input-tag" hidden />
+
+  <!-- Canvas -->
+  <canvas id="board"></canvas>
+
+  <!-- Socket.io client -->
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- Scripts -->
+  <script src="js/common.js"></script>
+  <script src="js/toolbar.js"></script>
+  <script src="js/drawing.js"></script>
+  <script src="js/undoRedo.js"></script>
+  <script src="js/sticky.js"></script>
+  <script src="js/upload.js"></script>
+  <script src="js/download.js"></script>
+  <script src="js/receiver.js"></script>
+</body>
+</html>

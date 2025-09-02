@@ -1,0 +1,46 @@
+body{
+    margin: 0px;
+}
+*{
+    box-sizing: border-box;
+}
+
+.tool-img{
+height: 4rem;
+}
+.toolbaroption{
+    display: flex;
+}
+.toolbar{
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+}
+.sticky{
+    height: 10rem;
+    width:6rem;
+   
+    position: absolute;
+    left: 40vw;
+    top:40vh;
+    cursor: move;
+
+
+}
+.nav{
+    border:1px solid black;
+    height: 20%;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+
+}
+.textarea{
+    height: 80%;
+    width: 100%;
+
+}
+.input-tag{
+    display: none;
+}
