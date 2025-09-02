@@ -63,6 +63,5 @@ http://localhost:3000
 
 ## 🔗 Links
 
-* **GitHub Repo:** [https://github.com/Jayant1008/realtime-whiteboard](https://github.com/Jayant1008/realtime-whiteboard)
 * **Demo:** [https://realtime-whiteboard-oerx.onrender.com](https://realtime-whiteboard-oerx.onrender.com)
 
